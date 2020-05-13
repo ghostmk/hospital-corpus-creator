@@ -12,7 +12,7 @@ place.replace(" ", "+")
 radius=str(input('Enter the Radius:'))
 
 
-response = requests.get('https://maps.googleapis.com/maps/api/geocode/json?address='+place+'&key=AIzaSyByoWKvAT9C_5uwRQJfUlwFF1jkO_kbOoc')
+response = requests.get('https://maps.googleapis.com/maps/api/geocode/json?address='+place+'&key=enter_apikey_here')
 resp_json_payload = response.json()
 lat1 = str(resp_json_payload['results'][0]['geometry']['location']['lat'])
 long1 = str(resp_json_payload['results'][0]['geometry']['location']['lng'])
@@ -23,7 +23,7 @@ place.replace(" ", "+")
 place_2=place
 
 
-response = requests.get('https://maps.googleapis.com/maps/api/geocode/json?address='+place+'&key=AIzaSyByoWKvAT9C_5uwRQJfUlwFF1jkO_kbOoc')
+response = requests.get('https://maps.googleapis.com/maps/api/geocode/json?address='+place+'&key=enter_apikey_here')
 resp_json_payload = response.json()
 lat2 = str(resp_json_payload['results'][0]['geometry']['location']['lat'])
 long2 = str(resp_json_payload['results'][0]['geometry']['location']['lng'])
@@ -33,8 +33,8 @@ long2 = str(resp_json_payload['results'][0]['geometry']['location']['lng'])
 
 
 
-url1 = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+lat1+','+long1+'&radius='+radius+'&type=hospital&key=AIzaSyByoWKvAT9C_5uwRQJfUlwFF1jkO_kbOoc'
-url2 = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+lat2+','+long2+'&radius='+radius+'&type=hospital&key=AIzaSyByoWKvAT9C_5uwRQJfUlwFF1jkO_kbOoc'
+url1 = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+lat1+','+long1+'&radius='+radius+'&type=hospital&key=enter_apikey_here'
+url2 = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+lat2+','+long2+'&radius='+radius+'&type=hospital&key=enter_apikey_here'
 
 headers={'content-type':'application/json',
          'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:63.0) Gecko/20100101 Firefox/63.0'}
