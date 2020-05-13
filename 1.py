@@ -4,7 +4,7 @@ import requests
 import time
 import threading
 
-apikey='AIzaSyByoWKvAT9C_5uwRQJfUlwFF1jkO_kbOoc'
+apikey=''
 place=str(input('Enter First Location:'))
 place_1=place
 place.replace(" ", "+")
